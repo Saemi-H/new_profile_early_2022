@@ -12,8 +12,8 @@ import ResponsiveAppBar from './AppBar/ResponsiveAppBar';
 function App() {
   return (
     <div className="App">
-      {/* <AppBar /> */}
-      <ResponsiveAppBar />
+      <AppBar />
+      {/* <ResponsiveAppBar /> */}
       <div className='content'>
         <IntroIndex />
         <WorkIndex />
