@@ -1,12 +1,22 @@
 import React from 'react'
 
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 import {CaretRightOutlined} from "@ant-design/icons"
 import { Button } from 'antd';
 
 import kioskImg from "../images/kiosk_pic.png";
 import tasioImg from "../images/tasio.png";
+
+const boxFocus = keyframes`
+  0%{
+    top: -200%;
+  }
+
+  100%{
+    top: 0%;
+  }
+`;
 
 const StyledTitleBox = styled.div`
     text-align: left;
@@ -18,7 +28,6 @@ const StyledTitleBox = styled.div`
         height: 1px;
         background-color: rgba(255, 255, 255, 0.3);
         margin-left: 1rem;
-
     }
 `;
 
@@ -36,7 +45,7 @@ const StyledDesContainer = styled.div`
   background-position: center;
   position: relative;
   border: 1px solid rgba(29, 70, 82, 1);
-    .content-box{
+  &:hover >.content-box{
       background-color: rgba(29, 70, 82, 0.8);
       position: absolute;
       top: 0;
@@ -45,7 +54,7 @@ const StyledDesContainer = styled.div`
       height: 100%;
       padding: 15px;
       box-sizing: border-box;
-    }
+  }
 `;
 
 const GoToAddressButton = () => {
