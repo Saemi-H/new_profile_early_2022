@@ -79,7 +79,6 @@ const GoToButton = ({kioskAddress}) => {
     </Link>
     </StyledGoToButton>
   )
-
 }
 
 const ProjectsIndex = () => {

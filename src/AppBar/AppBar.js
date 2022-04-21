@@ -10,7 +10,6 @@ const StyledAppBarContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100px;
-    border: 1px solid red;
     padding: 0 50px;
     box-sizing: border-box;
     line-height: 100px;
