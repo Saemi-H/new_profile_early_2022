@@ -1,27 +1,25 @@
+import React from 'react';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
+
 import './App.css';
+
+import MainPage from './MainPage';
+import WalkIn from './WalkIn/WalkIn';
+
 import 'antd/dist/antd.min.css';
 
-import Contact from './Contact/Contact';
-import IntroIndex from './Intro/IntroIndex';
-import ProjectsIndex from './Projects/ProjectsIndex';
-import Skills from './Skills/Skills';
-import WorkIndex from './Work/WorkIndex';
-import AppBar from './AppBar/AppBar';
-import ResponsiveAppBar from './AppBar/ResponsiveAppBar';
-
 function App() {
+
   return (
     <div className="App">
-      <AppBar />
-      {/* <ResponsiveAppBar /> */}
-      <div className='content'>
-        <IntroIndex />
-        <WorkIndex />
-        <ProjectsIndex />
-        <Skills />
-        <Contact />
+        <Routes>
+        <Route exact path="/" element={<WalkIn />} />
+        <Route path="/main" element={<MainPage />} />
+      </Routes>
       </div>
-    </div>
   );
 }
 

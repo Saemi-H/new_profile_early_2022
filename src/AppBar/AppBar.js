@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 
+import Logo from "../images/Saemi-signature.png";
+
 const StyledAppBarContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -41,11 +43,19 @@ const ResumeButton = () => {
     )
 }
 
+const ClickLogo = () => {
+    return(
+        <div>
+            <img src={Logo} alt="logo" />
+        </div>
+    )
+}
+
 const AppBar = () => {
   return (
     <StyledAppBarContainer>
         <div className='left'>
-            <h1>Logo</h1>
+            <ClickLogo />
         </div>
         <div className='right'>
             <ul className='app-menu-list'>
