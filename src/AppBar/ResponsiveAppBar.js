@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+
 import styled from "styled-components";
 
 import {CloseOutlined} from "@ant-design/icons"
@@ -18,9 +20,35 @@ const CloseButton = () =>{
 }
 
 const ResponsiveAppBar = () => {
+    const dispatch = useDispatch();
+  const GetId = (id) =>{
+    dispatch({type: "CLICKEDMENU", payload: id})
+  }
   return (
     <StyledAppBarContainer>
         <CloseButton />
+        <div>
+        <ul className='app-menu-list'>
+                <li onClick={()=>GetId(0)}>
+                    01. About
+                </li>
+                <li onClick={()=>GetId(1)}>
+                    02. Experience
+                </li>
+                <li onClick={()=>GetId(2)}>
+                    03. Work
+                </li>
+                <li onClick={()=>GetId(3)}>
+                    04. Skills
+                </li>
+                <li onClick={()=>GetId(4)}>
+                    Contact
+                </li>
+                <li>
+                   <ResumeButton />
+                </li>
+            </ul>
+        </div>
     </StyledAppBarContainer>
   )
 }
