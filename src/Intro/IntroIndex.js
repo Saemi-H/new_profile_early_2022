@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
+import { useDispatch } from 'react-redux';
 
 import styled from "styled-components";
-
+import avatar from "../images/avatar.png";
 
 const StyledTitleBox = styled.div`
     border: 1px solid green;
@@ -25,10 +26,14 @@ const StyledContainer = styled.div`
 
 
 const IntroIndex = () => {
+const sectionRef = useRef();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({type: "SAVEOFFSETTOP", payload: {id: 0, top: sectionRef.current.offsetTop}})
+  }, [sectionRef.current])
   return (
-    
     <>
-        <StyledTitleBox>
+        <StyledTitleBox ref={sectionRef}>
           <p>01. About Me</p>
       </StyledTitleBox>
       <StyledContainer>

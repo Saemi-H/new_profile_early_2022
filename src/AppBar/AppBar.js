@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+
 import styled from "styled-components";
 
 import Logo from "../images/Saemi-signature.png";
@@ -52,6 +54,10 @@ const ClickLogo = () => {
 }
 
 const AppBar = () => {
+    const dispatch = useDispatch();
+  const GetId = (id) =>{
+    dispatch({type: "CLICKEDMENU", payload: id})
+  }
   return (
     <StyledAppBarContainer>
         <div className='left'>
@@ -59,17 +65,20 @@ const AppBar = () => {
         </div>
         <div className='right'>
             <ul className='app-menu-list'>
-                <li>
+                <li onClick={()=>GetId(0)}>
                     01. About
                 </li>
-                <li>
+                <li onClick={()=>GetId(1)}>
                     02. Experience
                 </li>
-                <li>
+                <li onClick={()=>GetId(2)}>
                     03. Work
                 </li>
-                <li>
+                <li onClick={()=>GetId(3)}>
                     04. Skills
+                </li>
+                <li onClick={()=>GetId(4)}>
+                    Contact
                 </li>
                 <li>
                    <ResumeButton />

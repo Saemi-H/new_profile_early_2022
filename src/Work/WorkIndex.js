@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+
+import { useDispatch } from 'react-redux';
+
 import styled from "styled-components";
 import { Carousel } from 'antd';
 import {CaretRightOutlined} from "@ant-design/icons"
@@ -37,11 +40,17 @@ const contentStyle = {
 
 
 const WorkIndex = () => {
+    const sectionRef = useRef();
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch({type: "SAVEOFFSETTOP", payload: {id: 1, top: sectionRef.current.offsetTop}})
+    }, [sectionRef.current])
+
     const [dotPosition, setDotPosition] = React.useState('top');
 
 
     return (
-    <><StyledTitleBox>
+    <><StyledTitleBox ref={sectionRef}>
             <p><StyledColor>02.</StyledColor> Saemi's TimeLine</p>
         </StyledTitleBox>
         <Carousel style={carouselStyle} dotPosition={dotPosition}>

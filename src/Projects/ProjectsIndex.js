@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import {Link} from "react-router-dom"
+import { useDispatch } from 'react-redux';
 
 import styled, {keyframes} from "styled-components";
 
 import {CaretRightOutlined} from "@ant-design/icons"
-import { Button } from 'antd';
 
 import kioskImg from "../images/kiosk_pic.png";
 import tasioImg from "../images/tasio.png";
@@ -57,18 +58,39 @@ const StyledDesContainer = styled.div`
   }
 `;
 
-const GoToAddressButton = () => {
+const StyledGoToButton = styled.button`
+  border: none;
+  background-color: transparent;
+  color: #222;
+  font-weight: bold;
+`;
+
+const GoToButton = ({kioskAddress}) => {
   return(
-    <div>
-      <Button>바로가기</Button>
-    </div>
+    <StyledGoToButton>
+    <Link
+    to="#"
+    onClick={(e) => {
+      window.location.href = kioskAddress;
+      e.preventDefault();
+    }}
+    >
+        바로가기
+    </Link>
+    </StyledGoToButton>
   )
+
 }
 
 const ProjectsIndex = () => {
+  const sectionRef = useRef();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({type: "SAVEOFFSETTOP", payload: {id: 2, top: sectionRef.current.offsetTop}})
+  }, [sectionRef.current])
   return (
   <>
-      <StyledTitleBox>
+      <StyledTitleBox ref={sectionRef}>
         <p><StyledColor>03.</StyledColor>Projects</p>
       </StyledTitleBox>
         <StyledDesContainer>
@@ -78,7 +100,7 @@ const ProjectsIndex = () => {
             <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
               QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
               <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
-              <GoToAddressButton />
+              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
             </div>
           </div>
           </div>
