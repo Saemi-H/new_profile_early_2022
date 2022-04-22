@@ -65,10 +65,29 @@ const StyledGoToButton = styled.button`
   font-weight: bold;
 `;
 
+const StyledButton = styled.button`
+    background-color: transparent;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    padding: 0 15px;
+    border-radius: 4px;
+    &:hover{
+        border-color: #59e5c7;
+    }
+    > .link-style{
+        color: #fff;
+        &:hover{
+            color: #59e5c7;
+        }
+    }
+`;
+
 const GoToButton = ({kioskAddress}) => {
   return(
-    <StyledGoToButton>
+    <StyledButton>
     <Link
+    className='link-style'
     to="#"
     onClick={(e) => {
       window.location.href = kioskAddress;
@@ -77,7 +96,7 @@ const GoToButton = ({kioskAddress}) => {
     >
         바로가기
     </Link>
-    </StyledGoToButton>
+    </StyledButton>
   )
 }
 
@@ -92,6 +111,7 @@ const ProjectsIndex = () => {
       <StyledTitleBox ref={sectionRef}>
         <p><StyledColor>03.</StyledColor>Projects</p>
       </StyledTitleBox>
+      <div style={{display: 'flex'}}>
         <StyledDesContainer>
           <div className='content-box'>
           <div >
@@ -104,6 +124,43 @@ const ProjectsIndex = () => {
           </div>
           </div>
         </StyledDesContainer>
+        <StyledDesContainer>
+          <div className='content-box'>
+          <div >
+            <h6>Kiosk</h6>
+            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
+              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
+              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
+              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
+            </div>
+          </div>
+          </div>
+        </StyledDesContainer>
+        <StyledDesContainer>
+          <div className='content-box'>
+          <div >
+            <h6>Kiosk</h6>
+            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
+              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
+              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
+              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
+            </div>
+          </div>
+          </div>
+        </StyledDesContainer>
+        <StyledDesContainer>
+          <div className='content-box'>
+          <div >
+            <h6>Kiosk</h6>
+            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
+              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
+              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
+              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
+            </div>
+          </div>
+          </div>
+        </StyledDesContainer>
+        </div>
   </>
   )
 }

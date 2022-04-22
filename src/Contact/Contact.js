@@ -24,20 +24,41 @@ const StyledColor = styled.span`
 
 const StyledContent = styled.div`
   width: 50%;
-  position: relative;
-  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
   padding: 5rem;
   box-sizing: border-box;
   @media only screen and (max-width: 1000px){
     width: 100%;
+    padding: 1rem;
     padding-top:0;
   }
 `;
 
+const StyledButton = styled.button`
+    background-color: transparent;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    padding: 0 15px;
+    border-radius: 4px;
+    &:hover{
+        border-color: #59e5c7;
+    }
+    > .link-style{
+        color: #fff;
+        &:hover{
+            color: #59e5c7;
+        }
+    }
+`;
+
 const GoToButton = ({name, address}) => {
   return(
-    <Button>
+    <StyledButton>
     <Link
+    className='link-style'
     to="#"
     onClick={(e) => {
       window.location.href = address;
@@ -46,7 +67,7 @@ const GoToButton = ({name, address}) => {
     >
       {name}
     </Link>
-    </Button>
+    </StyledButton>
   )
 }
 
@@ -61,9 +82,9 @@ const Contact = () => {
     <>
     <StyledTitleBox ref={sectionRef}>Contact</StyledTitleBox>
     <StyledContent>
-      <GoToButton name={"RocketPunch 가기"} address={"https://www.rocketpunch.com/@saemihsecret"} />
-      <GoToButton name={"Programmers 가기"} address={"https://programmers.co.kr/pr/sstyle940104_991"} />
-      <GoToButton name={"이메일 보내기"} address={"mailto:saemi.h@outlook.com"} />
+      <GoToButton name={"RocketPunch"} address={"https://www.rocketpunch.com/@saemihsecret"} />
+      <GoToButton name={"Programmers"} address={"https://programmers.co.kr/pr/sstyle940104_991"} />
+      <GoToButton name={"Email"} address={"mailto:saemi.h@outlook.com"} />
     </StyledContent>
     </>
   )
