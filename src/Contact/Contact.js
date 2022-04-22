@@ -34,17 +34,17 @@ const StyledContent = styled.div`
   }
 `;
 
-const GoToButton = ({kioskAddress}) => {
+const GoToButton = ({name, address}) => {
   return(
     <Button>
     <Link
     to="#"
     onClick={(e) => {
-      window.location.href = kioskAddress;
+      window.location.href = address;
       e.preventDefault();
     }}
     >
-        바로가기
+      {name}
     </Link>
     </Button>
   )
@@ -61,7 +61,9 @@ const Contact = () => {
     <>
     <StyledTitleBox ref={sectionRef}>Contact</StyledTitleBox>
     <StyledContent>
-      <GoToButton />
+      <GoToButton name={"RocketPunch 가기"} address={"https://www.rocketpunch.com/@saemihsecret"} />
+      <GoToButton name={"Programmers 가기"} address={"https://programmers.co.kr/pr/sstyle940104_991"} />
+      <GoToButton name={"이메일 보내기"} address={"mailto:saemi.h@outlook.com"} />
     </StyledContent>
     </>
   )

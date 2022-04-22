@@ -28,7 +28,10 @@ const Skills = () => {
     dispatch({type: "SAVEOFFSETTOP", payload: {id: 3, top: sectionRef.current.offsetTop}})
   }, [sectionRef.current])
   return (
+    <>
     <StyledTitleBox ref={sectionRef}><StyledColor>04.</StyledColor> Skills</StyledTitleBox>
+    <div></div>
+    </>
   )
 }
 

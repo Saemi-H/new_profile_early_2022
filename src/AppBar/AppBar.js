@@ -1,7 +1,10 @@
 import React from 'react'
+import {Link} from "react-router-dom"
+
 import { useDispatch } from 'react-redux';
 
 import styled from "styled-components";
+import { MenuOutlined } from '@ant-design/icons';
 
 import Logo from "../images/Saemi-signature.png";
 
@@ -22,7 +25,28 @@ const StyledAppBarContainer = styled.div`
         align-items: center;
         text-decoration: none;
         list-style: none;
+        > li{
+            &:hover{
+                cursor: pointer;
+                color: #59e5c7;
+            }
+        }
     }
+    .reponsive-app-bar{
+        display: none;
+    }
+
+    @media only screen and (max-width: 1000px){
+    .app-menu-list{
+        display: none;
+    }
+    .right{
+       text-align: right;
+    }
+    .reponsive-app-bar{
+        display: inline-block;
+    }
+  }
 `;
 
 const StyledButton = styled.button`
@@ -32,22 +56,46 @@ const StyledButton = styled.button`
     border: 1px solid #fff;
     padding: 0 15px;
     border-radius: 4px;
+    &:hover{
+        border-color: #59e5c7;
+    }
+    > .link-style{
+        color: #fff;
+        &:hover{
+            color: #59e5c7;
+        }
+    }
 `;
 
-const ResumeButton = () => {
+const GoToButton = ({name, address}) => {
     return(
-        <div>
-            <StyledButton>
-                Resume
-            </StyledButton>
-        </div>
+      <StyledButton>
+      <Link
+      to="#"
+      onClick={(e) => {
+        window.location.href = address;
+        e.preventDefault();
+      }}
+      className='link-style'
+      >
+        {name} 바로가기
+      </Link>
+      </StyledButton>
     )
-}
+  }
 
 const ClickLogo = () => {
     return(
         <div>
             <img src={Logo} alt="logo" />
+        </div>
+    )
+}
+
+const ResponsiveAppBar = () => {
+    return(
+        <div>
+            <MenuOutlined />
         </div>
     )
 }
@@ -80,9 +128,12 @@ const AppBar = () => {
                     Contact
                 </li>
                 <li>
-                   <ResumeButton />
+                   <GoToButton name={"GitHub"} address={"https://github.com/hsm0104"} />
                 </li>
             </ul>
+            <div className="reponsive-app-bar">
+                <ResponsiveAppBar />
+            </div>
         </div>
     </StyledAppBarContainer>
   )

@@ -37,7 +37,7 @@ const StyledColor = styled.span`
 `;
 
 const StyledDesContainer = styled.div`
-  width: 50%;
+  width: 300px;
   height: 40vh;
   position: relative;
   background-image: url(${kioskImg});
