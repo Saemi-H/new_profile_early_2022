@@ -26,6 +26,12 @@
   margin: 0 auto;
 }
 
+ /* the slides */
+ .slick-slide {
+	margin: 0 10px;
+}
+/* the parent */
+
 
 .App-header {
   background-color: #282c34;

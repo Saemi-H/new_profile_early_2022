@@ -36,9 +36,17 @@ const StyledColor = styled.span`
     color: #59e5c7;
 `;
 
+const StyledContainer = styled.div`
+  display: inline-flex;
+  flex-wrap: wrap;
+`
+
 const StyledDesContainer = styled.div`
   width: 300px;
   height: 40vh;
+  margin: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
   position: relative;
   background-image: url(${kioskImg});
   background-size: contain;
@@ -111,7 +119,7 @@ const ProjectsIndex = () => {
       <StyledTitleBox ref={sectionRef}>
         <p><StyledColor>03.</StyledColor>Projects</p>
       </StyledTitleBox>
-      <div style={{display: 'flex'}}>
+      <StyledContainer>
         <StyledDesContainer>
           <div className='content-box'>
           <div >
@@ -160,7 +168,7 @@ const ProjectsIndex = () => {
           </div>
           </div>
         </StyledDesContainer>
-        </div>
+        </StyledContainer>
   </>
   )
 }
