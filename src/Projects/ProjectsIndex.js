@@ -2,22 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import {Link} from "react-router-dom"
 import { useDispatch } from 'react-redux';
 
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 import {CaretRightOutlined} from "@ant-design/icons"
 
 import kioskImg from "../images/kiosk_pic.png";
 import tasioImg from "../images/tasio.png";
-
-const boxFocus = keyframes`
-  0%{
-    top: -200%;
-  }
-
-  100%{
-    top: 0%;
-  }
-`;
+import monitoringImg from "../images/monitoring.png"
 
 const StyledTitleBox = styled.div`
     text-align: left;
@@ -40,6 +31,16 @@ const StyledContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
 `
+const StyledOverlayExplanation = styled.div`
+  height: 60%;
+  padding: 25px; 
+  background-color: #112240;
+  position: absolute; 
+  left:0;
+  bottom: -100%;
+  white-space: pre-wrap;
+  transition: bottom 0.5s;
+`;
 
 const StyledDesContainer = styled.div`
   width: 300px;
@@ -47,6 +48,7 @@ const StyledDesContainer = styled.div`
   margin: 10px;
   flex-shrink: 0;
   flex-grow: 0;
+  overflow: hidden;
   position: relative;
   background-image: url(${kioskImg});
   background-size: contain;
@@ -64,13 +66,16 @@ const StyledDesContainer = styled.div`
       padding: 15px;
       box-sizing: border-box;
   }
-`;
+  &:hover ${StyledOverlayExplanation}{
+    bottom:0;
+  }
+  ${({id}) => id === 'tasio' && `
+    background-image: url(${tasioImg});
+  `}
 
-const StyledGoToButton = styled.button`
-  border: none;
-  background-color: transparent;
-  color: #222;
-  font-weight: bold;
+${({id}) => id === 'monitor' && `
+    background-image: url(${monitoringImg});
+  `}
 `;
 
 const StyledButton = styled.button`
@@ -90,6 +95,7 @@ const StyledButton = styled.button`
         }
     }
 `;
+
 
 const GoToButton = ({kioskAddress}) => {
   return(
@@ -120,51 +126,36 @@ const ProjectsIndex = () => {
         <p><StyledColor>03.</StyledColor>Projects</p>
       </StyledTitleBox>
       <StyledContainer>
-        <StyledDesContainer>
+        <StyledDesContainer id='monitor'>
           <div className='content-box'>
           <div >
-            <h6>Kiosk</h6>
-            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
-              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
-              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
-              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
-            </div>
+            <StyledOverlayExplanation>
+              차량의 상태, 이벤트 상태 등 차량 관련 상태를 관제실에서 볼 수 있는 관제 웹을 React Material 고도화 프로젝트를 진행하고 있습니다.{"\n"}{"\n"}
+              <CaretRightOutlined />React, Redux, Leaflet, Material UI, Styled Component {"\n"}{"\n"}
+              관리자만 접속 가능한 상태입니다.
+            </StyledOverlayExplanation>
           </div>
           </div>
         </StyledDesContainer>
         <StyledDesContainer>
           <div className='content-box'>
           <div >
-            <h6>Kiosk</h6>
-            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
-              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
-              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
+            <StyledOverlayExplanation>
+              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}{"\n"}
+              <CaretRightOutlined />React, Redux, React Query, Leaflet, Material UI, Styled Component {"\n"}{"\n"}
               <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
-            </div>
+            </StyledOverlayExplanation>
           </div>
           </div>
         </StyledDesContainer>
-        <StyledDesContainer>
+        <StyledDesContainer id='tasio'>
           <div className='content-box'>
           <div >
-            <h6>Kiosk</h6>
-            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
-              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
-              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
-              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
-            </div>
-          </div>
-          </div>
-        </StyledDesContainer>
-        <StyledDesContainer>
-          <div className='content-box'>
-          <div >
-            <h6>Kiosk</h6>
-            <div style={{padding: "10px", backgroundColor: "#112240", position: "absolute", whiteSpace: "pre-wrap"}}>
-              QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
-              <CaretRightOutlined />React, Redux, React-Query, Leaflet, Material UI, Styled-Component
-              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
-            </div>
+            <StyledOverlayExplanation>
+            Vue.js와 Vuetify로 만들어진 웹 뷰 형식의 앱을 유지 보수 했습니다. {"\n"}{"\n"}
+              <CaretRightOutlined />Vue, Vuetify {"\n"}{"\n"}
+              <GoToButton kioskAddress="https://tasioweb.springgo.io/"/>
+            </StyledOverlayExplanation>
           </div>
           </div>
         </StyledDesContainer>
