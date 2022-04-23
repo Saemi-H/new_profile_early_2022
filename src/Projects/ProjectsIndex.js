@@ -32,7 +32,7 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
 `
 const StyledOverlayExplanation = styled.div`
-  height: 60%;
+  height: 100%;
   padding: 25px; 
   background-color: #112240;
   position: absolute; 

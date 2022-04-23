@@ -93,18 +93,24 @@ const ClickLogo = () => {
 }
 
 const ResponsiveAppBar = () => {
+    const dispatch = useDispatch();
+
+    const open = (state) =>{
+        dispatch({type: "OPENMENU"})
+    }
     return(
-        <div>
+        <div onClick={open}>
             <MenuOutlined />
         </div>
     )
 }
 
 const AppBar = () => {
-    const dispatch = useDispatch();
+const dispatch = useDispatch();
   const GetId = (id) =>{
     dispatch({type: "CLICKEDMENU", payload: id})
   }
+
   return (
     <StyledAppBarContainer>
         <div className='left'>
