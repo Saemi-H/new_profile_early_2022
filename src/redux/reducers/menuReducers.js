@@ -9,7 +9,7 @@ export default function menuReducer(state = initialState, action){
         case "OPENMENU":
             return{
                 ...state,
-                menuOpen: !state.menuOpen
+                menuOpen: action.payload
             }
         case "SAVEOFFSETTOP":
             return{

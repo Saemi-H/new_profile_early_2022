@@ -87,7 +87,9 @@ const GoToButton = ({name, address}) => {
 const ClickLogo = () => {
     return(
         <div>
+            <Link to="/">
             <img src={Logo} alt="logo" />
+            </Link>
         </div>
     )
 }
@@ -95,11 +97,11 @@ const ClickLogo = () => {
 const ResponsiveAppBar = () => {
     const dispatch = useDispatch();
 
-    const open = (state) =>{
-        dispatch({type: "OPENMENU"})
+    const open = () =>{
+        dispatch({type: "OPENMENU", payload: true})
     }
     return(
-        <div onClick={open}>
+        <div style={{cursor: "pointer"}} onClick={open}>
             <MenuOutlined />
         </div>
     )

@@ -10,10 +10,13 @@ import IntroIndex from './Intro/IntroIndex';
 import ProjectsIndex from './Projects/ProjectsIndex';
 import Skills from './Skills/Skills';
 import WorkIndex from './Work/WorkIndex';
+import ResponsiveAppBar from './AppBar/ResponsiveAppBar';
 
 function MainPage() {
     const offsetArray = useSelector((state) => state.menuReducer.offsetTop)
     const selectedId = useSelector((state) => state.menuReducer.clickedId)
+    const openState = useSelector((state) => state.menuReducer.menuOpen);
+
     const getOffsetTop = offsetArray.find(offsetTop => offsetTop.id === selectedId)
   
     const GoToTop = () => {
@@ -21,22 +24,17 @@ function MainPage() {
         top: getOffsetTop.top,
         behavior: "smooth",
       })
-      setMenuState(false);
     }
     useEffect(()=>{
       GoToTop();
+
     }, [selectedId])
   
-      const [menuState, setMenuState] = useState(false);
-      const openMenu = (state) =>{
-        setMenuState(state);
-      }
-      const closeMenu = (state) =>{
-        setMenuState(state);
-    }
+
   return (
     <>
     <AppBar/>
+    {openState&& <ResponsiveAppBar />}
       <div className='content'>
         <IntroIndex />
         <WorkIndex />
