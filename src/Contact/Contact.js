@@ -60,6 +60,7 @@ const GoToButton = ({name, address}) => {
     <Link
     className='link-style'
     to="#"
+    target="_blank"
     onClick={(e) => {
       window.location.href = address;
       e.preventDefault();
@@ -82,8 +83,7 @@ const Contact = () => {
     <>
     <StyledTitleBox ref={sectionRef}>Contact</StyledTitleBox>
     <StyledContent>
-      <GoToButton name={"RocketPunch"} address={"https://www.rocketpunch.com/@saemihsecret"} />
-      <GoToButton name={"Programmers"} address={"https://programmers.co.kr/pr/sstyle940104_991"} />
+      <GoToButton name={"Notion"} address={"https://www.notion.so/c734ea141660446d9ad6dec1b79f00d2"} />
       <GoToButton name={"Email"} address={"mailto:saemi.h@outlook.com"} />
     </StyledContent>
     </>

@@ -142,6 +142,8 @@ const ProjectsIndex = () => {
           <div >
             <StyledOverlayExplanation>
               QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}{"\n"}
+              참고 사항: 고도화는 완료 되었으나, 사내 사정으로 인해 본 서버에는 기존 코드가 올라가 있습니다 {"\n"}{"\n"}
+              해상도 : 1080*1920{"\n"}{"\n"}
               <CaretRightOutlined />React, Redux, React Query, Leaflet, Material UI, Styled Component {"\n"}{"\n"}
               <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
             </StyledOverlayExplanation>
