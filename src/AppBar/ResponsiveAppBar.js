@@ -16,6 +16,9 @@ const StyledAppBarContainer = styled.div`
     z-index: 99;
     padding: 10px;
     box-sizing: border-box;
+    box-shadow: -200px 2px 400px 14px rgba(89, 229, 199,0.7);
+-webkit-box-shadow: -200px 2px 400px 14px rgba(89, 229, 199,0.7);
+-moz-box-shadow: -200px 2px 400px 14px rgba(89, 229, 199,0.7);
     .app-menu-list{
         list-style: none;
         margin-top: 30%;
@@ -25,7 +28,10 @@ const StyledAppBarContainer = styled.div`
             cursor: pointer;
             &:hover{
             color: #59e5c7;
-        }
+            }
+            >span{
+                color: #59e5c7;
+            }
         }
     }
 `;
@@ -92,16 +98,16 @@ const dispatch = useDispatch();
         <div>
         <ul className='app-menu-list'>
                 <li onClick={()=>GetId(0)}>
-                    01. About
+                    <span>01.</span>About
                 </li>
                 <li onClick={()=>GetId(1)}>
-                    02. Experience
+                    <span>02.</span>Experience
                 </li>
                 <li onClick={()=>GetId(2)}>
-                    03. Work
+                    <span>03.</span>Work
                 </li>
                 <li onClick={()=>GetId(3)}>
-                    04. Skills
+                    <span>04.</span>Skills
                 </li>
                 <li onClick={()=>GetId(4)}>
                     Contact

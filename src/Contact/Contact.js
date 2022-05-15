@@ -4,8 +4,6 @@ import { useDispatch } from 'react-redux';
 
 import styled from "styled-components";
 
-import { Button } from 'antd';
-
 const StyledTitleBox = styled.div`
     font-size: 2rem;
     margin-bottom: 40px;
@@ -17,9 +15,6 @@ const StyledTitleBox = styled.div`
         margin-left: 1rem;
 
     }
-`;
-const StyledColor = styled.span`
-    color: #59e5c7;
 `;
 
 const StyledContent = styled.div`
