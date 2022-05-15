@@ -17,7 +17,6 @@ const StyledTitleBox = styled.div`
         height: 1px;
         background-color: rgba(255, 255, 255, 0.3);
         margin-left: 1rem;
-
     }
 `;
 
@@ -30,6 +29,7 @@ const carouselStyle = {
 }
 
 const contentStyle = {
+    width: '95%',
     height: '45vh',
     color: "#fff",
     textAlign: "left",
