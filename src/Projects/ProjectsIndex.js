@@ -132,7 +132,7 @@ const ProjectsIndex = () => {
             <StyledOverlayExplanation>
               차량의 상태, 이벤트 상태 등 차량 관련 상태를 관제실에서 볼 수 있는 관제 웹을 React Material 고도화 프로젝트를 진행하고 있습니다.{"\n"}{"\n"}
               <CaretRightOutlined />React, Redux, Leaflet, Material UI, Styled Component {"\n"}{"\n"}
-              관리자만 접속 가능한 상태입니다.
+              <GoToButton kioskAddress="https://saemihong940104.notion.site/conversion-of-Monitoring-System-74a06cbed4994c499108eb518a25675f"/>
             </StyledOverlayExplanation>
           </div>
           </div>
@@ -142,10 +142,9 @@ const ProjectsIndex = () => {
           <div >
             <StyledOverlayExplanation>
               QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수 및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}{"\n"}
-              참고 사항: 고도화는 완료 되었으나, 사내 사정으로 인해 본 서버에는 기존 코드가 올라가 있습니다 {"\n"}{"\n"}
               해상도 : 1080*1920{"\n"}{"\n"}
               <CaretRightOutlined />React, Redux, React Query, Leaflet, Material UI, Styled Component {"\n"}{"\n"}
-              <GoToButton kioskAddress="https://kiosk.springgo.io/"/>
+              <GoToButton kioskAddress="https://saemihong940104.notion.site/conversion-of-Kiosk-d3bc6f54cbbf46b282ab678da0322219/"/>
             </StyledOverlayExplanation>
           </div>
           </div>
@@ -156,7 +155,7 @@ const ProjectsIndex = () => {
             <StyledOverlayExplanation>
             Vue.js와 Vuetify로 만들어진 웹 뷰 형식의 앱을 유지 보수 했습니다. {"\n"}{"\n"}
               <CaretRightOutlined />Vue, Vuetify {"\n"}{"\n"}
-              <GoToButton kioskAddress="https://tasioweb.springgo.io/"/>
+              <GoToButton kioskAddress="https://saemihong940104.notion.site/d1de934c100c4d5c9441e2e3f36c3be6"/>
             </StyledOverlayExplanation>
           </div>
           </div>
