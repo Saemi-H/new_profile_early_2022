@@ -74,7 +74,10 @@ const WorkIndex = () => {
               <CaretRightOutlined /> 펫프 파트너스 신규 프로젝트 어드민 개발
             </p>
             <p>
-              <CaretRightOutlined /> React-Redux, React-Query를 사용해 상태 관리
+              <CaretRightOutlined /> React, TS 도입 해 어드민 공통 컴포넌트 개발
+            </p>
+            <p>
+              <CaretRightOutlined /> React-Query를 사용해 상태 관리
             </p>
             <p>
               <CaretRightOutlined /> React,Vue와 같이 FrameWork를 사용해 웹 뷰
