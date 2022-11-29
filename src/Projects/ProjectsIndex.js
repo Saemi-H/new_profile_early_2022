@@ -147,7 +147,8 @@ const ProjectsIndex = () => {
             <div>
               <StyledOverlayExplanation>
                 파트너스 신규서비스 어드민 페이지입니다. 신규 파트너스 등록 가능
-                및 기존 파트너스에 대한 정보를 볼 수 있습니다.{"\n"}
+                및 기존 파트너스에 대한 정보(키워드 쿠폰, 정산 내역 등)를 볼 수
+                있습니다.{"\n"}
                 {"\n"}
                 <CaretRightOutlined />
                 Vue, vue-bootstrap {"\n"}
