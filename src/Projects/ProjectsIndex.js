@@ -153,7 +153,7 @@ const ProjectsIndex = () => {
                 <CaretRightOutlined />
                 Vue, vue-bootstrap {"\n"}
                 {"\n"}
-                <GoToButton notionAddress="https://saemihong940104.notion.site/conversion-of-Monitoring-System-74a06cbed4994c499108eb518a25675f" />
+                <GoToButton notionAddress="https://www.notion.so/saemihong940104/Petf-Partners-Admin-74f16b8acfac47b18ed516b47ce41170" />
               </StyledOverlayExplanation>
             </div>
           </div>
