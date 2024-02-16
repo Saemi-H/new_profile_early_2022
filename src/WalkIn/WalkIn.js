@@ -76,8 +76,11 @@ function WalkIn() {
           <p className="child">Profile</p>
         </div>
       </StyledWaivy>
-      <div className="startBtn" onClick={goToMain}>
-        <span>Enter</span>
+      <div className="startBtn korButton" onClick={goToMain}>
+        <span>Kor</span>
+      </div>
+      <div className="startBtn engButton" onClick={goToMain}>
+        <span>Eng</span>
       </div>
     </StyledContainer>
   );

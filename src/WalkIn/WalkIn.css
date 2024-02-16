@@ -1,18 +1,22 @@
-.startBtn{
-    opacity:1;
-    width: 25%;
+.startBtn {
+  opacity: 1;
+  width: 25%;
   min-height: 60px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
-  background: #4FD1C5;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  background: #4fd1c5;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 230, 217, 1) 0%,
+    rgba(79, 209, 197, 1) 100%
+  );
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -23,106 +27,117 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 10
   padding: 10px;
   color: #fff;
   animation: buttonAppear linear 10s;
-
 }
 
-.startBtn:before{
-content: '';
+.korButton {
+  left: 35%;
+}
+.engButton {
+  left: 65%;
+}
+
+.startBtn:before {
+  content: "";
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  border: 6px solid #00FFCB;
-  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  border: 6px solid #00ffcb;
+  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: all .3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
-.startBtn:hover, .startBtn:focus {
-    transform: translateX(-60%) scale(1.1);
+.startBtn:hover,
+.startBtn:focus {
+  transform: translateX(-60%) scale(1.1);
+}
+
+.startBtn:hover::before,
+.startBtn:focus::before {
+  opacity: 1;
+}
+
+.startBtn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00ffcb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.startBtn:hover::after,
+.startBtn:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes buttonAppear {
+  0% {
+    opacity: 0;
   }
-  
-  .startBtn:hover::before, .startBtn:focus::before {
+  85% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
-  
-  .startBtn::after {
-    content: '';
-    width: 30px; height: 30px;
-    border-radius: 100%;
-    border: 6px solid #00FFCB;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-  }
-  
-  .startBtn:hover::after, .startBtn:focus::after {
-    animation: none;
-    display: none;
-  }
-  
-  @keyframes buttonAppear {
-      0%{
-          opacity:0
-      }
-      85%{
-          opacity:0;
-      }
-      100%
-      {opacity: 1;}
-  }
+}
 
-  @keyframes ring {
-    0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
-    }
-    100% {
-      width: 300px;
-      height: 300px;
-      opacity: 0;
-    }
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
   }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
 
 .parent {
-    position: relative;
-    top: 30%;
-    height: 6.5rem;
-    overflow-y: hidden;
-    display: block;
-    color: #fff;
-    }
+  position: relative;
+  top: 30%;
+  height: 6.5rem;
+  overflow-y: hidden;
+  display: block;
+  color: #fff;
+}
 .child {
-    opacity: 0;
-    font-size: 3rem;
-    padding:0;
-    animation: appear linear 5s;
-    animation-delay: 3.5s;
-    }
+  opacity: 0;
+  font-size: 3rem;
+  padding: 0;
+  animation: appear linear 5s;
+  animation-delay: 3.5s;
+}
 @keyframes appear {
-     0%{ 
-          transform: translateY(4rem);
-          opacity: 0;
-        }
-      50% {   
-          transform: translateY(0);
-          opacity: 1;
-        }
-        100%{
-            transform: translateY(4rem);
-          opacity: 0;
-        }
-    }
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+}
 
-    @media screen and (max-width: 1000){
-        html{
-            font-size: 67%;
-        }
-    }
+@media screen and (max-width: 1000) {
+  html {
+    font-size: 67%;
+  }
+}
