@@ -77,15 +77,21 @@ const IntroIndex = () => {
       <StyledContainer>
         <StyledLeftSide>
           <StyledAvatar src={avatar} alt="My Avatar" />
-          <p>홍새미</p>
+          <p>Saemi</p>
           <p>1994.01.04</p>
         </StyledLeftSide>
         <StyledRightSide>
-          안녕하세요! UI/UX에 대해 고민하는 사용자 입장에서 생각하는 개발자
-          홍새미 입니다 :) UI 퍼블리싱에서 나아가 JS로 코딩하는 것에 흥미가 생겨
-          FE 개발자 길을 택하게 되었습니다. 새로운 기술을 학습하고 공유하기를
-          좋아하고 팀워크를 중요하게 생각합니다. 클린 코딩을 지향하고 새로운
-          stack을 함께 쌓아갈 수 있도록 하겠습니다.
+          Welcome to Seami's Page! a seasoned web frontend developer with a
+          dedicated focus on user interface and user experience considerations.
+          The evolution from UI publishing to proficient JavaScript coding has
+          propelled my journey as a Front-End (FE) developer. My commitment to
+          continual learning, coupled with a passion for knowledge sharing,
+          underscores my dedication to staying abreast of emerging technologies.
+          I place a high premium on teamwork, recognizing its pivotal role in
+          achieving successful outcomes. Adhering to the principles of clean
+          coding, I am poised to contribute to the collaborative construction of
+          innovative stacks. Looking forward to the opportunity to further
+          enhance and optimize web development projects :)
         </StyledRightSide>
       </StyledContainer>
     </>

@@ -119,7 +119,7 @@ const GoToButton = ({ notionAddress }) => {
           e.preventDefault();
         }}
       >
-        바로가기
+        Details
       </Link>
     </StyledButton>
   );
