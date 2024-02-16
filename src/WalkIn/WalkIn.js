@@ -45,8 +45,8 @@ const StyledContainer = styled.div`
 
 function WalkIn() {
   const navigate = useNavigate();
-  const goToMain = () => {
-    navigate("/main");
+  const goToMain = (endPoint) => {
+    navigate(endPoint);
   };
   return (
     <StyledContainer
@@ -76,10 +76,10 @@ function WalkIn() {
           <p className="child">Profile</p>
         </div>
       </StyledWaivy>
-      <div className="startBtn korButton" onClick={goToMain}>
+      <div className="startBtn korButton" onClick={() => goToMain("/main")}>
         <span>Kor</span>
       </div>
-      <div className="startBtn engButton" onClick={goToMain}>
+      <div className="startBtn engButton" onClick={() => goToMain("/")}>
         <span>Eng</span>
       </div>
     </StyledContainer>
