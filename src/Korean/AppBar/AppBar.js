@@ -128,7 +128,7 @@ const AppBar = () => {
           <li>
             <GoToButton
               name={"GitHub"}
-              address={"https://github.com/hsm0104"}
+              address={"https://github.com/Saemi-H"}
             />
           </li>
         </ul>

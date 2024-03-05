@@ -78,6 +78,9 @@ const WorkIndex = () => {
               <CaretRightOutlined /> Contributed writing frontend team's
               Tech-blog
             </p>
+            <p>
+              <CaretRightOutlined /> Worked in E-commerce industry
+            </p>
           </div>
         </div>
         <div>

@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<WalkIn />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/Engmain" element={<EngMainPage />} />
+        <Route path="/engMain" element={<EngMainPage />} />
       </Routes>
     </div>
   );

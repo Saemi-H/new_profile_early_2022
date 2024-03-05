@@ -79,7 +79,7 @@ function WalkIn() {
       <div className="startBtn korButton" onClick={() => goToMain("/main")}>
         <span>Kor</span>
       </div>
-      <div className="startBtn engButton" onClick={() => goToMain("/")}>
+      <div className="startBtn engButton" onClick={() => goToMain("/engMain")}>
         <span>Eng</span>
       </div>
     </StyledContainer>
