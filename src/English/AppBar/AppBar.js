@@ -78,7 +78,7 @@ const GoToButton = ({ name, address }) => {
         }}
         className="link-style"
       >
-        {name} 바로가기
+        {name}
       </Link>
     </StyledButton>
   );

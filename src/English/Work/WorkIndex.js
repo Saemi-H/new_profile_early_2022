@@ -92,7 +92,7 @@ const WorkIndex = () => {
 
             <p>
               <CaretRightOutlined /> Developing UI using libraries, such as
-              Vuetify and Material UI
+              Vuetify, Chart.js, leaflet.js and Material UI
             </p>
             <p>
               <CaretRightOutlined /> Managing states using React-Redux-thunk and
@@ -101,6 +101,9 @@ const WorkIndex = () => {
             <p>
               <CaretRightOutlined /> Led project migrating Kiosk Page using
               React
+            </p>
+            <p>
+              <CaretRightOutlined /> Renewal monitoring system pages using React
             </p>
           </div>
         </div>
