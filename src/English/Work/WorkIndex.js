@@ -62,26 +62,21 @@ const WorkIndex = () => {
             <p>
               Front-End Developer <StyledColor>@Pet-Friends</StyledColor>
             </p>
-            <p>March 2022.08 - Present</p>
+            <p>Aug. 2022 - Dec. 2023</p>
             <p>
-              <CaretRightOutlined /> Back-End developers, Designer, QA, Font-End
-              developers와의 커뮤니케이션 및 협업
+              <CaretRightOutlined /> Introduced testing-library, such as Jest
+              and Cypress
             </p>
             <p>
-              <CaretRightOutlined /> Vue-bootstrap 사용해 UI 개발
+              <CaretRightOutlined /> Managing states with React-Query and Jotai
             </p>
             <p>
-              <CaretRightOutlined /> 펫프 파트너스 신규 프로젝트 어드민 개발
+              <CaretRightOutlined /> Led payment page migration project from Vue
+              to Next.js
             </p>
             <p>
-              <CaretRightOutlined /> React, TS 도입 해 어드민 공통 컴포넌트 개발
-            </p>
-            <p>
-              <CaretRightOutlined /> React-Query를 사용해 상태 관리
-            </p>
-            <p>
-              <CaretRightOutlined /> React,Vue와 같이 FrameWork를 사용해 웹 뷰
-              앱 개발
+              <CaretRightOutlined /> Contributed writing frontend team's
+              Tech-blog
             </p>
           </div>
         </div>
@@ -90,47 +85,46 @@ const WorkIndex = () => {
             <p>
               Front-End Developer <StyledColor>@SpringCloud</StyledColor>
             </p>
-            <p>March 2021 - 2022.07</p>
+            <p>Mar. 2021 - Jul. 2022</p>
+
             <p>
-              <CaretRightOutlined /> Back-End developers, Designer, QA, Font-End
-              developers와의 커뮤니케이션 및 협업
+              <CaretRightOutlined /> Developing UI using libraries, such as
+              Vuetify and Material UI
             </p>
             <p>
-              <CaretRightOutlined /> Vuetify, Material UI와 같이 FrameWork
-              Library를 사용해 UI 개발
+              <CaretRightOutlined /> Managing states using React-Redux-thunk and
+              React-Query
             </p>
             <p>
-              <CaretRightOutlined /> React-Redux, React-Query를 사용해 상태 관리
-            </p>
-            <p>
-              <CaretRightOutlined /> React,Vue와 같이 FrameWork를 사용해 웹 뷰
-              앱 개발
+              <CaretRightOutlined /> Led project migrating Kiosk Page using
+              React
             </p>
           </div>
         </div>
         <div>
           <div style={contentStyle}>
             <p>
-              UI/UX 웹 디자인, 퍼블리셔 과정{" "}
-              <StyledColor>@그린컴퓨터아카데미</StyledColor>
+              UI/UX Web-Designing and Publishing class{" "}
+              <StyledColor>@Green computer academy</StyledColor>
             </p>
             <p>June 2020 - Nov 2020</p>
             <p>
-              <CaretRightOutlined /> Photoshop 툴 사용해 간단한 웹 디자인 시안
+              <CaretRightOutlined /> Web-designing using Photoshop
             </p>
             <p>
-              <CaretRightOutlined /> HTML, CSS, Jquery 사용해 웹 페이지 구축
+              <CaretRightOutlined /> Built websites using HTML, CSS, Jquery
             </p>
           </div>
         </div>
         <div>
           <div style={contentStyle}>
             <p>
-              학사 졸업 <StyledColor>@University of Saskatchewan</StyledColor>
+              Undergraduate{" "}
+              <StyledColor>@University of Saskatchewan</StyledColor>
             </p>
             <p>July 2013 - June 2018</p>
             <p>
-              <CaretRightOutlined /> BA of Psychology 졸업
+              <CaretRightOutlined /> BA of Psychology
             </p>
           </div>
         </div>

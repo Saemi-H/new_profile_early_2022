@@ -1,25 +1,23 @@
-import React from 'react';
-import {
-  Route,
-  Routes
-} from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 
-import MainPage from './MainPage';
-import WalkIn from './WalkIn/WalkIn';
+import MainPage from "./MainPage";
+import EngMainPage from "./EngMainPage";
+import WalkIn from "./WalkIn/WalkIn";
 
-import 'antd/dist/antd.min.css';
+import "antd/dist/antd.min.css";
 
 function App() {
-
   return (
     <div className="App">
-        <Routes>
+      <Routes>
         <Route exact path="/" element={<WalkIn />} />
         <Route path="/main" element={<MainPage />} />
+        <Route path="/Engmain" element={<EngMainPage />} />
       </Routes>
-      </div>
+    </div>
   );
 }
 
