@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b68107c2.css",
+    "main.js": "/static/js/main.db2ed4ea.js",
+    "static/js/787.dcb60298.chunk.js": "/static/js/787.dcb60298.chunk.js",
+    "static/media/kiosk_pic.png": "/static/media/kiosk_pic.f01fa6913e84c5641b88.png",
+    "static/media/monitoring.png": "/static/media/monitoring.a69d9da3cb383d3b0d08.png",
+    "static/media/partnersListPage.png": "/static/media/partnersListPage.d63dc4cecb9c10d4f8e1.png",
+    "static/media/universe.jpg": "/static/media/universe.4ca7f745982f46f3caab.jpg",
+    "static/media/tasio.png": "/static/media/tasio.047252ab49da1705976f.png",
+    "static/media/paymentImgration.png": "/static/media/paymentImgration.b9ba6c4ab8b8ec5f9978.png",
+    "static/media/samplingGift.png": "/static/media/samplingGift.ffb75e6bb2c27875c8c7.png",
+    "static/media/settleBankImg.png": "/static/media/settleBankImg.a3c9416553029c4151ed.png",
+    "static/media/avatar.png": "/static/media/avatar.050b25e089d0689844f4.png",
+    "static/media/rqlogo.png": "/static/media/rqlogo.3ade8757532305341249.png",
+    "static/media/react.png": "/static/media/react.c55945fe075e2392850a.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/typescript.svg": "/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
+    "index.html": "/index.html",
+    "main.b68107c2.css.map": "/static/css/main.b68107c2.css.map",
+    "main.db2ed4ea.js.map": "/static/js/main.db2ed4ea.js.map",
+    "787.dcb60298.chunk.js.map": "/static/js/787.dcb60298.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b68107c2.css",
+    "static/js/main.db2ed4ea.js"
+  ]
+}
