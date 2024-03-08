@@ -7,9 +7,9 @@ import styled from "styled-components";
 import { CaretRightOutlined } from "@ant-design/icons";
 
 import kioskImg from "../../images/kiosk_pic.png";
-import tasioImg from "../../images/tasio.png";
-import monitoringImg from "../../images/monitoring.png";
-import partnersListPage from "../../images/partnersListPage.png";
+import SettleBankImg from "../../images/settleBankImg.png";
+import PaymentMigrationImg from "../../images/paymentImgration.png";
+import SamplingGiftImg from "../../images/samplingGift.png";
 
 const StyledTitleBox = styled.div`
   text-align: left;
@@ -71,22 +71,22 @@ const StyledDesContainer = styled.div`
     bottom: 0;
   }
   ${({ id }) =>
-    id === "tasio" &&
+    id === "paymentMigration" &&
     `
-    background-image: url(${tasioImg});
+    background-image: url(${PaymentMigrationImg});
   `}
 
   ${({ id }) =>
-    id === "monitor" &&
+    id === "samplingGift" &&
     `
-    background-image: url(${monitoringImg});
+    background-image: url(${SamplingGiftImg});
   `}
 
 
 ${({ id }) =>
-    id === "pfadmin" &&
+    id === "settleBank" &&
     `
-    background-image: url(${partnersListPage});
+    background-image: url(${SettleBankImg});
   `}
 `;
 
@@ -138,38 +138,53 @@ const ProjectsIndex = () => {
     <>
       <StyledTitleBox ref={sectionRef}>
         <p>
-          <StyledColor>03.</StyledColor>Projects
+          <StyledColor>03.</StyledColor>Project Highlights
         </p>
       </StyledTitleBox>
       <StyledContainer>
-        <StyledDesContainer id="pfadmin">
+        <StyledDesContainer id="paymentMigration">
           <div className="content-box">
             <div>
               <StyledOverlayExplanation>
-                파트너스 신규서비스 어드민 페이지입니다. 신규 파트너스 등록 가능
-                및 기존 파트너스에 대한 정보(키워드 쿠폰, 정산 내역 등)를 볼 수
-                있습니다.{"\n"}
+                Migration of the payment page from Vue to Next. {"\n"}
                 {"\n"}
                 <CaretRightOutlined />
-                Vue, vue-bootstrap {"\n"}
+                Next.js, Jotai, React-Query, Styled-Component, TypeScript, Jest,
+                Cypress {"\n"}
                 {"\n"}
-                <GoToButton notionAddress="https://www.notion.so/saemihong940104/Petf-Partners-Admin-74f16b8acfac47b18ed516b47ce41170" />
+                <GoToButton notionAddress="https://www.notion.so/saemihong940104/Payment-Page-Migration-95e1b0367ad749eb85eb3040f014e78d?pvs=4" />
               </StyledOverlayExplanation>
             </div>
           </div>
         </StyledDesContainer>
-        <StyledDesContainer id="monitor">
+        <StyledDesContainer id="samplingGift">
           <div className="content-box">
             <div>
               <StyledOverlayExplanation>
-                차량의 상태, 이벤트 상태 등 차량 관련 상태를 관제실에서 볼 수
-                있는 관제 웹을 React Material 고도화 프로젝트를 진행하고
-                있습니다.{"\n"}
+                A popup with sampling gift lists and users could choose either
+                get it (with ‘ok’ button) or not getting it (with ‘cancel’
+                button).
+                {"\n"}
                 {"\n"}
                 <CaretRightOutlined />
-                React, Redux, Leaflet, Material UI, Styled Component {"\n"}
+                Vue, Vuex, Postman {"\n"}
                 {"\n"}
-                <GoToButton notionAddress="https://saemihong940104.notion.site/conversion-of-Monitoring-System-74a06cbed4994c499108eb518a25675f" />
+                <GoToButton notionAddress="https://www.notion.so/saemihong940104/Sampling-Gift-c65489f7e8df412fa10c6e98ffdc858a?pvs=4" />
+              </StyledOverlayExplanation>
+            </div>
+          </div>
+        </StyledDesContainer>
+        <StyledDesContainer id="settleBank">
+          <div className="content-box">
+            <div>
+              <StyledOverlayExplanation>
+                Added a new payment method and renewed payment options selection
+                box UI.{"\n"}
+                {"\n"}
+                <CaretRightOutlined />
+                Vue, Vuex {"\n"}
+                {"\n"}
+                <GoToButton notionAddress="https://www.notion.so/saemihong940104/Add-Payment-Method-Settle-Bank-2bc546bf5ff84eaa8c4ec6eca4889e4f?pvs=4" />
               </StyledOverlayExplanation>
             </div>
           </div>
@@ -178,31 +193,16 @@ const ProjectsIndex = () => {
           <div className="content-box">
             <div>
               <StyledOverlayExplanation>
-                QR코드를 통해 웹 뷰 앱으로 이동 가능한 키오스크 앱을 유지 보수
-                및 React Material 고도화 프로젝트를 진행했습니다. {"\n"}
+                Migration of Kiosk page from class based React to Functional
+                component React with Material UI. {"\n"}
                 {"\n"}
-                해상도 : 1080*1920{"\n"}
+                Resolution : 1080*1920{"\n"}
                 {"\n"}
                 <CaretRightOutlined />
                 React, Redux, React Query, Leaflet, Material UI, Styled
                 Component {"\n"}
                 {"\n"}
                 <GoToButton notionAddress="https://saemihong940104.notion.site/conversion-of-Kiosk-d3bc6f54cbbf46b282ab678da0322219/" />
-              </StyledOverlayExplanation>
-            </div>
-          </div>
-        </StyledDesContainer>
-        <StyledDesContainer id="tasio">
-          <div className="content-box">
-            <div>
-              <StyledOverlayExplanation>
-                Vue.js와 Vuetify로 만들어진 웹 뷰 형식의 앱을 유지 보수
-                했습니다. {"\n"}
-                {"\n"}
-                <CaretRightOutlined />
-                Vue, Vuetify {"\n"}
-                {"\n"}
-                <GoToButton notionAddress="https://saemihong940104.notion.site/d1de934c100c4d5c9441e2e3f36c3be6" />
               </StyledOverlayExplanation>
             </div>
           </div>

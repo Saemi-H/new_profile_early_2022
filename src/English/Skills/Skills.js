@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 
 import styled from "styled-components";
 import { Rate } from "antd";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Slider from "react-slick";
 
